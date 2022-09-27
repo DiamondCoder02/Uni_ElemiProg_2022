@@ -37,6 +37,7 @@ print(getLineStringLength2D(X, Y))
 print(getLineStringLength3D(X, Y, Z))
 
 
+#Github copilot made it in a minute with just the comments
 
 #read from file the 3 coordinates of each point
 with open(path, 'r') as f:
