@@ -29,13 +29,12 @@ def getLineStringLength2D(X: list, Y: list) ->float:
 def getLineStringLength3D(X: list, Y: list, Z:list) ->float:
     s = 0.0
     for i in range(0, len(X)-1):
-        s += getDistance(X[i], Y[i], X[i+1], Y[i+1], Z[i], Z[i+1])
+        s += get3DDistance(X[i], Y[i], Z[i], X[i+1], Y[i+1], Z[i+1])
     return s
 
 X, Y, Z = getCoordingLists(path)
 print(getLineStringLength2D(X, Y))
 print(getLineStringLength3D(X, Y, Z))
-
 
 #Github copilot made it in a minute with just the comments
 
