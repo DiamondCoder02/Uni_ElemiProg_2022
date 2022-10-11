@@ -1,4 +1,4 @@
-#CoderDiamond 27.09.2022
+#DiamondCoder 27.09.2022
 import matplotlib.pyplot as plt
 path = "LongThermo.csv"
 

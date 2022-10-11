@@ -1,4 +1,4 @@
-#CoderDiamond 04.10.2022
+#DiamondCoder 04.10.2022
 import matplotlib.pyplot as plt
 #xˇn+1=r*xˇn(1-xˇn)
 x=0.4
