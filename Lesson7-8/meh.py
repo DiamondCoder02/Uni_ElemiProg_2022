@@ -1,23 +1,40 @@
 #DiamondCoder 25.10.2022
 import math
-from tkinter import Y
 import matplotlib.pyplot as plt
 
-dalia = plt.imread('dalia.jpg')
+#dalia = plt.imread('dalia.jpg')
 
-def getHumanReadableString(secons:int) -> str:
+def getUnitString(n: int, unit: str) -> str:
+    if n==0: return ''
+    if n==1:
+        return f'{n} {unit}'
+    return f'{n} {unit}s'
+def getHumanReadableString(seconds:int) -> str:
     M=60
     H=60*M
     D=24*H
     Y=365*D
-    year, seconds = divmod(secons, Y)
+    year, seconds = divmod(seconds, Y)
     day, seconds = divmod(seconds, D)
     hour, seconds = divmod(seconds, H)
     minute, seconds = divmod(seconds, M)
     
+    unitList = [getUnitString(year, 'year'), 
+                getUnitString(day, 'day'), 
+                getUnitString(hour, 'hour'), 
+                getUnitString(minute, 'minute'), 
+                getUnitString(seconds, 'second')
+                ]
+    
+    joined = ', '.join([x for x in unitList if x!=''])[::-1]
+    return joined.replace(' ,', ' dna ', 1)[::-1]
+    print(year, day, hour, minute, seconds)
+
+#print(getUnitString(1, 'year'))
+print(getHumanReadableString(1087645504))
 
 
-
+"""
 def showLayers(ras):
     rr, gr, br = ras.copy(), ras.copy(), ras.copy()
     nrows, ncols, layers = dalia.shape
@@ -34,8 +51,8 @@ def showLayers(ras):
     plt.show()
     plt.imshow(br)
     plt.show()
-
-showLayers(dalia)
+"""
+#showLayers(dalia)
 
 """
 r=[0]*256
