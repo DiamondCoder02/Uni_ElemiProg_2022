@@ -15,6 +15,5 @@ def greyScale(rgbRaster):
     return gray
 
 gray = greyScale(dalia)
-
 plt.imshow(gray)
 plt.show()
